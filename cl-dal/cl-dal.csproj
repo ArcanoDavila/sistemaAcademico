@@ -4,15 +4,14 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{499F1827-D9EF-4A94-BA6F-9421B6553077}</ProjectGuid>
+    <ProjectGuid>{F3CF8F7B-A09E-4988-864D-4DC98A8D46D9}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>cl_model</RootNamespace>
-    <AssemblyName>cl-model</AssemblyName>
+    <RootNamespace>cl_dal</RootNamespace>
+    <AssemblyName>cl-dal</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <Deterministic>true</Deterministic>
-    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,7 +32,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="MySql.Data">
-      <HintPath>conn\MySql.Data.dll</HintPath>
+      <HintPath>..\sistemaAcademico\conn\MySql.Data.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -45,13 +44,15 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="clsUsuarios.cs" />
-    <Compile Include="clsDisciplinaCurso.cs" />
-    <Compile Include="clsDisciplina.cs" />
-    <Compile Include="clsCommon.cs" />
-    <Compile Include="clsCursos.cs" />
-    <Compile Include="clsPeriodos.cs" />
+    <Compile Include="conexao.cs" />
+    <Compile Include="connPeriodo.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\cl-model\cl-model.csproj">
+      <Project>{499f1827-d9ef-4a94-ba6f-9421b6553077}</Project>
+      <Name>cl-model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

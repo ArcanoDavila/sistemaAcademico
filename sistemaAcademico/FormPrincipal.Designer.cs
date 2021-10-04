@@ -132,9 +132,9 @@ namespace sistemaAcademico
             this.button1.FlatAppearance.MouseDownBackColor = System.Drawing.Color.Maroon;
             this.button1.FlatAppearance.MouseOverBackColor = System.Drawing.Color.Maroon;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button1.Location = new System.Drawing.Point(760, 3);
+            this.button1.Location = new System.Drawing.Point(753, 3);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(37, 23);
+            this.button1.Size = new System.Drawing.Size(34, 20);
             this.button1.TabIndex = 2;
             this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = false;
