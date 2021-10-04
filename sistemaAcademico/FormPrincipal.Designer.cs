@@ -36,10 +36,10 @@ namespace sistemaAcademico
             this.pn_header = new System.Windows.Forms.Panel();
             this.lb_statusServer = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pn_tela = new System.Windows.Forms.FlowLayoutPanel();
+            this.pn_child = new System.Windows.Forms.FlowLayoutPanel();
+            this.pn_status = new System.Windows.Forms.Panel();
             this.pn_menu.SuspendLayout();
             this.pn_header.SuspendLayout();
-            this.pn_tela.SuspendLayout();
             this.SuspendLayout();
             // 
             // pn_menu
@@ -53,6 +53,7 @@ namespace sistemaAcademico
             this.pn_menu.Name = "pn_menu";
             this.pn_menu.Size = new System.Drawing.Size(189, 451);
             this.pn_menu.TabIndex = 1;
+            this.pn_menu.Paint += new System.Windows.Forms.PaintEventHandler(this.pn_menu_Paint);
             // 
             // bt_disciplina
             // 
@@ -140,20 +141,28 @@ namespace sistemaAcademico
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pn_tela
+            // pn_child
             // 
-            this.pn_tela.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_tela.Controls.Add(this.pn_header);
-            this.pn_tela.Controls.Add(this.pn_menu);
-            this.pn_tela.Location = new System.Drawing.Point(0, 0);
-            this.pn_tela.Margin = new System.Windows.Forms.Padding(0);
-            this.pn_tela.Name = "pn_tela";
-            this.pn_tela.Size = new System.Drawing.Size(800, 500);
-            this.pn_tela.TabIndex = 0;
-            this.pn_tela.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            this.pn_tela.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
-            this.pn_tela.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
-            this.pn_tela.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
+            this.pn_child.BackColor = System.Drawing.Color.White;
+            this.pn_child.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pn_child.Location = new System.Drawing.Point(189, 50);
+            this.pn_child.Margin = new System.Windows.Forms.Padding(0);
+            this.pn_child.Name = "pn_child";
+            this.pn_child.Size = new System.Drawing.Size(611, 340);
+            this.pn_child.TabIndex = 0;
+            this.pn_child.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
+            this.pn_child.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
+            this.pn_child.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
+            this.pn_child.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
+            // 
+            // pn_status
+            // 
+            this.pn_status.BackColor = System.Drawing.Color.GhostWhite;
+            this.pn_status.ForeColor = System.Drawing.Color.Transparent;
+            this.pn_status.Location = new System.Drawing.Point(189, 393);
+            this.pn_status.Name = "pn_status";
+            this.pn_status.Size = new System.Drawing.Size(611, 107);
+            this.pn_status.TabIndex = 2;
             // 
             // FormPrincipal
             // 
@@ -161,7 +170,10 @@ namespace sistemaAcademico
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 500);
-            this.Controls.Add(this.pn_tela);
+            this.Controls.Add(this.pn_menu);
+            this.Controls.Add(this.pn_status);
+            this.Controls.Add(this.pn_header);
+            this.Controls.Add(this.pn_child);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -169,7 +181,6 @@ namespace sistemaAcademico
             this.pn_menu.ResumeLayout(false);
             this.pn_header.ResumeLayout(false);
             this.pn_header.PerformLayout();
-            this.pn_tela.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -179,11 +190,12 @@ namespace sistemaAcademico
         private System.Windows.Forms.Panel pn_menu;
         private System.Windows.Forms.Button bt_periodo;
         private System.Windows.Forms.Panel pn_header;
-        private System.Windows.Forms.FlowLayoutPanel pn_tela;
+        private System.Windows.Forms.FlowLayoutPanel pn_child;
         private System.Windows.Forms.Button bt_disciplina;
         private System.Windows.Forms.Button bt_cursos;
         private System.Windows.Forms.Label lb_statusServer;
         private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Panel pn_status;
     }
 }
 

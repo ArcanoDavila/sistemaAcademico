@@ -59,5 +59,19 @@ namespace sistemaAcademico
         {
 
         }
+
+        private void pn_menu_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private Form activeForm = null;
+     
+        private void openChildForm(Form childForm)
+        {
+            if(activeForm != null)
+                activeForm.Close();
+            activeForm = childForm;
+        }
     }
 }
