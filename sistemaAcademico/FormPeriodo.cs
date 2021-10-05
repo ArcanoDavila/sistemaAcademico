@@ -10,16 +10,11 @@ using System.Windows.Forms;
 
 namespace sistemaAcademico
 {
-    public partial class FormCursos : Form
+    public partial class FormPeriodo : Form
     {
-        public FormCursos()
+        public FormPeriodo()
         {
             InitializeComponent();
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
         }
     }
 }

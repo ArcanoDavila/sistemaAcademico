@@ -7,9 +7,9 @@ using System.Data;
 using MySql.Data.MySqlClient;
 using MySql.Data;
 
-using cl_model;
+using Domain;
 
-namespace cl_dal
+namespace DataAccess
 {
     public class connPeriodo
     {

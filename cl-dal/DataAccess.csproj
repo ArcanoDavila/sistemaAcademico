@@ -49,9 +49,9 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\cl-model\cl-model.csproj">
+    <ProjectReference Include="..\cl-model\Domain.csproj">
       <Project>{499f1827-d9ef-4a94-ba6f-9421b6553077}</Project>
-      <Name>cl-model</Name>
+      <Name>Domain</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

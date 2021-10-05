@@ -36,8 +36,8 @@ namespace sistemaAcademico
             this.pn_header = new System.Windows.Forms.Panel();
             this.lb_statusServer = new System.Windows.Forms.Label();
             this.button1 = new System.Windows.Forms.Button();
-            this.pn_child = new System.Windows.Forms.FlowLayoutPanel();
             this.pn_status = new System.Windows.Forms.Panel();
+            this.panelChild = new System.Windows.Forms.Panel();
             this.pn_menu.SuspendLayout();
             this.pn_header.SuspendLayout();
             this.SuspendLayout();
@@ -86,6 +86,7 @@ namespace sistemaAcademico
             this.bt_cursos.Text = "Cursos";
             this.bt_cursos.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_cursos.UseVisualStyleBackColor = false;
+            this.bt_cursos.Click += new System.EventHandler(this.bt_cursos_Click);
             // 
             // bt_periodo
             // 
@@ -141,20 +142,6 @@ namespace sistemaAcademico
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // pn_child
-            // 
-            this.pn_child.BackColor = System.Drawing.Color.White;
-            this.pn_child.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pn_child.Location = new System.Drawing.Point(189, 50);
-            this.pn_child.Margin = new System.Windows.Forms.Padding(0);
-            this.pn_child.Name = "pn_child";
-            this.pn_child.Size = new System.Drawing.Size(611, 340);
-            this.pn_child.TabIndex = 0;
-            this.pn_child.Paint += new System.Windows.Forms.PaintEventHandler(this.flowLayoutPanel1_Paint);
-            this.pn_child.MouseDown += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseDown);
-            this.pn_child.MouseMove += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseMove);
-            this.pn_child.MouseUp += new System.Windows.Forms.MouseEventHandler(this.flowLayoutPanel1_MouseUp);
-            // 
             // pn_status
             // 
             this.pn_status.BackColor = System.Drawing.Color.GhostWhite;
@@ -164,16 +151,23 @@ namespace sistemaAcademico
             this.pn_status.Size = new System.Drawing.Size(611, 107);
             this.pn_status.TabIndex = 2;
             // 
+            // panelChild
+            // 
+            this.panelChild.Location = new System.Drawing.Point(189, 50);
+            this.panelChild.Name = "panelChild";
+            this.panelChild.Size = new System.Drawing.Size(611, 340);
+            this.panelChild.TabIndex = 3;
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 500);
+            this.Controls.Add(this.panelChild);
             this.Controls.Add(this.pn_menu);
             this.Controls.Add(this.pn_status);
             this.Controls.Add(this.pn_header);
-            this.Controls.Add(this.pn_child);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FormPrincipal";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
@@ -190,12 +184,12 @@ namespace sistemaAcademico
         private System.Windows.Forms.Panel pn_menu;
         private System.Windows.Forms.Button bt_periodo;
         private System.Windows.Forms.Panel pn_header;
-        private System.Windows.Forms.FlowLayoutPanel pn_child;
         private System.Windows.Forms.Button bt_disciplina;
         private System.Windows.Forms.Button bt_cursos;
         private System.Windows.Forms.Label lb_statusServer;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel pn_status;
+        private System.Windows.Forms.Panel panelChild;
     }
 }
 

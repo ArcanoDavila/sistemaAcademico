@@ -29,12 +29,89 @@ namespace sistemaAcademico
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.bt_login = new System.Windows.Forms.Button();
+            this.txt_user = new System.Windows.Forms.TextBox();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.SuspendLayout();
+            // 
+            // panel1
+            // 
+            this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(299, 451);
+            this.panel1.TabIndex = 0;
+            // 
+            // bt_login
+            // 
+            this.bt_login.Location = new System.Drawing.Point(461, 263);
+            this.bt_login.Name = "bt_login";
+            this.bt_login.Size = new System.Drawing.Size(183, 31);
+            this.bt_login.TabIndex = 1;
+            this.bt_login.Text = "Acceder";
+            this.bt_login.UseVisualStyleBackColor = true;
+            // 
+            // txt_user
+            // 
+            this.txt_user.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_user.Font = new System.Drawing.Font("Consolas", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txt_user.Location = new System.Drawing.Point(461, 173);
+            this.txt_user.Name = "txt_user";
+            this.txt_user.Size = new System.Drawing.Size(183, 26);
+            this.txt_user.TabIndex = 2;
+            this.txt_user.Text = "User";
+            this.txt_user.Enter += new System.EventHandler(this.txt_user_Enter);
+            this.txt_user.Leave += new System.EventHandler(this.txt_user_Leave);
+            // 
+            // txt_password
+            // 
+            this.txt_password.BackColor = System.Drawing.SystemColors.Control;
+            this.txt_password.Font = new System.Drawing.Font("Consolas", 12F);
+            this.txt_password.Location = new System.Drawing.Point(461, 218);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(183, 26);
+            this.txt_password.TabIndex = 3;
+            this.txt_password.Text = "Password";
+            this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
+            this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Eurostile", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(397, 49);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(315, 45);
+            this.label1.TabIndex = 4;
+            this.label1.Text = "My Sys Academy";
+            // 
+            // FormLogin
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.txt_password);
+            this.Controls.Add(this.txt_user);
+            this.Controls.Add(this.bt_login);
+            this.Controls.Add(this.panel1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Name = "FormLogin";
             this.Text = "FormLogin";
+            this.Load += new System.EventHandler(this.FormLogin_Load);
+            this.ResumeLayout(false);
+            this.PerformLayout();
+
         }
 
         #endregion
+
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button bt_login;
+        private System.Windows.Forms.TextBox txt_user;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Label label1;
     }
 }

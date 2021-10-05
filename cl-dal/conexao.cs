@@ -8,7 +8,7 @@ using MySql.Data;
 using MySql.Data.MySqlClient;
 
 
-namespace cl_dal
+namespace DataAccess
 {
     public class conexao
     {

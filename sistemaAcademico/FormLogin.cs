@@ -16,5 +16,44 @@ namespace sistemaAcademico
         {
             InitializeComponent();
         }
+
+        private void txt_password_Enter(object sender, EventArgs e)
+        {
+            if(txt_password.Text == "Password")
+            {
+                txt_password.Text = "";
+                txt_password.UseSystemPasswordChar = true;
+            }
+        }
+
+        private void txt_password_Leave(object sender, EventArgs e)
+        {
+            if(txt_password.Text == "")
+            {
+                txt_password.Text = "Password";
+                txt_password.UseSystemPasswordChar = false;
+            }
+        }
+
+        private void FormLogin_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void txt_user_Enter(object sender, EventArgs e)
+        {
+            if (txt_user.Text == "User")
+            {
+                txt_user.Text = "";
+            }
+        }
+
+        private void txt_user_Leave(object sender, EventArgs e)
+        {
+            if (txt_user.Text == "")
+            {
+                txt_user.Text = "User";
+            }
+        }
     }
 }

@@ -72,6 +72,18 @@ namespace sistemaAcademico
             if(activeForm != null)
                 activeForm.Close();
             activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            panelChild.Controls.Add(childForm);
+            panelChild.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
+
+        private void bt_cursos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormCursos());
         }
     }
 }

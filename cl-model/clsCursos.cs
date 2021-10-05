@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace cl_model
+namespace Domain
 {
     public class clsCursos:clsCommon
     {

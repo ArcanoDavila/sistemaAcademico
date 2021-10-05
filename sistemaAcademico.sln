@@ -5,9 +5,9 @@ VisualStudioVersion = 16.0.31424.327
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "wf-SysAcademico", "sistemaAcademico\wf-SysAcademico.csproj", "{7DC12A1E-7614-471E-9563-6EB7D330A9DD}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cl-model", "cl-model\cl-model.csproj", "{499F1827-D9EF-4A94-BA6F-9421B6553077}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "cl-model\Domain.csproj", "{499F1827-D9EF-4A94-BA6F-9421B6553077}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "cl-dal", "cl-dal\cl-dal.csproj", "{F3CF8F7B-A09E-4988-864D-4DC98A8D46D9}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DataAccess", "cl-dal\DataAccess.csproj", "{F3CF8F7B-A09E-4988-864D-4DC98A8D46D9}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
