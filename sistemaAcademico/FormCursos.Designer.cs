@@ -52,6 +52,7 @@ namespace sistemaAcademico
             this.bt_addCurso.TabIndex = 1;
             this.bt_addCurso.Text = "Adicionar";
             this.bt_addCurso.UseVisualStyleBackColor = true;
+            this.bt_addCurso.Click += new System.EventHandler(this.bt_addCurso_Click);
             // 
             // FormCursos
             // 

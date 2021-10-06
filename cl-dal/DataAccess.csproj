@@ -44,15 +44,10 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="conexao.cs" />
-    <Compile Include="connPeriodo.cs" />
+    <Compile Include="connectionToSql.cs" />
+    <Compile Include="PeriodoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\cl-model\Domain.csproj">
-      <Project>{499f1827-d9ef-4a94-ba6f-9421b6553077}</Project>
-      <Name>Domain</Name>
-    </ProjectReference>
+    <Compile Include="UserDao.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

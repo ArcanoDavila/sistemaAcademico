@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Domain;
 
 namespace sistemaAcademico
 {
@@ -23,6 +24,7 @@ namespace sistemaAcademico
             {
                 txt_password.Text = "";
                 txt_password.UseSystemPasswordChar = true;
+                txt_password.ForeColor = Color.Black;
             }
         }
 
@@ -32,6 +34,7 @@ namespace sistemaAcademico
             {
                 txt_password.Text = "Password";
                 txt_password.UseSystemPasswordChar = false;
+                txt_password.ForeColor = Color.DimGray;
             }
         }
 
@@ -45,6 +48,7 @@ namespace sistemaAcademico
             if (txt_user.Text == "User")
             {
                 txt_user.Text = "";
+                txt_user.ForeColor = Color.Black;
             }
         }
 
@@ -53,7 +57,48 @@ namespace sistemaAcademico
             if (txt_user.Text == "")
             {
                 txt_user.Text = "User";
+                txt_user.ForeColor = Color.Gray;
             }
+        }
+
+        private void bt_login_Click(object sender, EventArgs e)
+        {
+            if(txt_user.Text != "User")
+            {
+                if(txt_password.Text != "Password")
+                {
+                    UserModel user = new UserModel();
+                    var validLogin = user.LoginUser(txt_user.Text, txt_password.Text);
+                    if(validLogin == true)
+                    {
+                        FormPrincipal mainMenu = new FormPrincipal();
+                        mainMenu.Show();
+                        this.Hide();
+                    } else
+                    {
+                        msgError("Login Invalido");
+                    }
+                }
+                else
+                {
+                    msgError("Please enter password!");
+                }
+            }
+            else
+            {
+                msgError("Please enter username!");
+            }
+        }
+
+        private void msgError(string msg)
+        {
+            lb_errorLogin.Text = "   " + msg;
+            lb_errorLogin.Visible = true;
+        }
+
+        private void bt_closeLogin_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }
