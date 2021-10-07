@@ -4,8 +4,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data;
-using MySql.Data;
 using MySql.Data.MySqlClient;
+using Common.Cache;
 
 
 namespace DataAccess
@@ -27,6 +27,11 @@ namespace DataAccess
                     MySqlDataReader reader = comand.ExecuteReader();
                     if (reader.HasRows)
                     {
+                        while (reader.Read())
+                        {
+                            UserLoginCache.UserLogin = reader.GetString(0);
+                            UserLoginCache.UserName = reader.GetString(2);
+                        }
                         return true;
                     } 
                     else

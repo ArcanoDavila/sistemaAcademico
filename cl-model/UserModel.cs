@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using DataAccess;
+using Common.Cache;
 
 namespace Domain
 {
@@ -13,6 +14,18 @@ namespace Domain
         public bool LoginUser(string user, string pass)
         {
             return userDao.Login(user, pass);
+        }
+
+        public bool editPassword(string user, string pass)
+        {
+            if(user == UserLoginCache.UserLogin)
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
     }
 }

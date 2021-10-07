@@ -4,66 +4,23 @@ using System.ComponentModel;
 using System.Data;
 using System.Drawing;
 using System.Linq;
+using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Common.Cache;
 
 namespace sistemaAcademico
 {
     public partial class FormPrincipal : Form
     {
-        bool mover = false;
-        Point posicao_inicial;
 
         public FormPrincipal()
         {
             InitializeComponent();
-        }
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
 
         }
 
-        private void panel1_MouseMove(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void flowLayoutPanel1_MouseDown(object sender, MouseEventArgs e)
-        {
-            mover = true;
-            posicao_inicial = new Point(e.X, e.Y);
-        }
-
-        private void flowLayoutPanel1_MouseUp(object sender, MouseEventArgs e)
-        {
-            mover = false;
-        }
-
-        private void flowLayoutPanel1_MouseMove(object sender, MouseEventArgs e)
-        {
-            if (mover)
-            {
-                Point novo = PointToScreen(e.Location);
-                Location = new Point(novo.X - posicao_inicial.X, novo.Y - posicao_inicial.Y);
-            }
-        }
-
-        private void button1_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void flowLayoutPanel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void pn_menu_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
 
         private Form activeForm = null;
      
@@ -84,6 +41,34 @@ namespace sistemaAcademico
         private void bt_cursos_Click(object sender, EventArgs e)
         {
             openChildForm(new FormCursos());
+        }
+
+        private void bt_closePrincipal_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void LoadUserData()
+        {
+            lb_UserLogin.Text = "" + UserLoginCache.UserLogin;
+            lb_UserName.Text = "" + UserLoginCache.UserName;
+        }
+
+        private void FormPrincipal_Load(object sender, EventArgs e)
+        {
+            LoadUserData();
+        }
+
+        [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
+        private extern static void ReleaseCapture();
+
+        [DllImport("user32.DLL", EntryPoint = "SendMessage")]
+        private extern static void SendMessage(System.IntPtr hWnd, int wMsg, int wParam, int lParam);
+
+        private void pn_header_MouseMove(object sender, MouseEventArgs e)
+        {
+            ReleaseCapture();
+            SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
     }
 }

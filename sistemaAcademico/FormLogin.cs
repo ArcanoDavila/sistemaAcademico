@@ -73,6 +73,7 @@ namespace sistemaAcademico
                     {
                         FormPrincipal mainMenu = new FormPrincipal();
                         mainMenu.Show();
+                        mainMenu.FormClosed += Logout;
                         this.Hide();
                     } else
                     {
@@ -100,5 +101,23 @@ namespace sistemaAcademico
         {
             this.Close();
         }
+
+        private void Logout(object sender, FormClosedEventArgs e)
+        {
+            txt_password.Clear();
+            txt_user.Clear();
+
+            lb_errorLogin.Visible = false;
+
+            txt_password.Text = "Password";
+            txt_password.ForeColor = Color.Gray;
+            txt_password.UseSystemPasswordChar = false;
+
+            txt_user.Text = "User";
+            txt_user.ForeColor = Color.Gray;
+
+            this.Show();
+        }
+
     }
 }
