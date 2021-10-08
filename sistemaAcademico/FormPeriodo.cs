@@ -95,11 +95,17 @@ namespace sistemaAcademico
                     var id = dg_periodos.CurrentRow.Cells["perid"].Value.ToString();
                     objetoPeriodo.DeletePeriodo(id);
                     MostrarProdutos();
+                    MessageBox.Show("Excluido com sucesso!");
                 }
                 catch (Exception ex)
                 {
                     MessageBox.Show("Erro ao Excluir dados por: " + ex);
                 }
+
+            }
+            else
+            {
+                MessageBox.Show("Selecione uma linha na tabela Periodos");
             }
         }
     }

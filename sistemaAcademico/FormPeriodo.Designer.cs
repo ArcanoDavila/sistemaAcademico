@@ -78,6 +78,7 @@ namespace sistemaAcademico
             // 
             // dg_periodos
             // 
+            this.dg_periodos.BackgroundColor = System.Drawing.Color.Silver;
             this.dg_periodos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dg_periodos.Location = new System.Drawing.Point(17, 50);
             this.dg_periodos.Name = "dg_periodos";

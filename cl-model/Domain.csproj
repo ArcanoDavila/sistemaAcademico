@@ -47,7 +47,6 @@
   <ItemGroup>
     <Compile Include="clsDisciplinaCurso.cs" />
     <Compile Include="clsDisciplina.cs" />
-    <Compile Include="clsCommon.cs" />
     <Compile Include="clsCursos.cs" />
     <Compile Include="clsPeriodos.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

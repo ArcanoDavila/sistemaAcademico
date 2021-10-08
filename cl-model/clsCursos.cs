@@ -6,14 +6,9 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class clsCursos:clsCommon
+    public class clsCursos
     {
-        private int _cursoID;
-        private int _periodoID; 
 
-
-        public int CursoID { get => _cursoID; set => _cursoID = value; }
-        public int PeriodoID { get => _periodoID; set => _periodoID = value; }
 
     }
 }

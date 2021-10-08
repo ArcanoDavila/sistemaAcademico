@@ -8,8 +8,6 @@ namespace Domain
 {
     public class clsDisciplina:clsCommon
     {
-        private int _disciplinaID;
 
-        public int DisciplinaID { get => _disciplinaID; set => _disciplinaID = value; }
     }
 }
