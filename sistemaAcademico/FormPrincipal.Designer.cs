@@ -30,17 +30,16 @@ namespace sistemaAcademico
         private void InitializeComponent()
         {
             this.pn_menu = new System.Windows.Forms.Panel();
+            this.label1 = new System.Windows.Forms.Label();
             this.lb_UserName = new System.Windows.Forms.Label();
             this.lb_UserLogin = new System.Windows.Forms.Label();
             this.bt_disciplina = new System.Windows.Forms.Button();
             this.bt_cursos = new System.Windows.Forms.Button();
             this.bt_periodo = new System.Windows.Forms.Button();
             this.pn_header = new System.Windows.Forms.Panel();
-            this.lb_statusServer = new System.Windows.Forms.Label();
             this.bt_closePrincipal = new System.Windows.Forms.Button();
             this.pn_status = new System.Windows.Forms.Panel();
             this.panelChild = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
             this.pn_menu.SuspendLayout();
             this.pn_header.SuspendLayout();
             this.SuspendLayout();
@@ -59,6 +58,17 @@ namespace sistemaAcademico
             this.pn_menu.Name = "pn_menu";
             this.pn_menu.Size = new System.Drawing.Size(189, 450);
             this.pn_menu.TabIndex = 1;
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
+            this.label1.Location = new System.Drawing.Point(12, 16);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(104, 24);
+            this.label1.TabIndex = 5;
+            this.label1.Text = "Bem Vindo";
             // 
             // lb_UserName
             // 
@@ -130,11 +140,11 @@ namespace sistemaAcademico
             this.bt_periodo.Text = "Periodos";
             this.bt_periodo.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_periodo.UseVisualStyleBackColor = false;
+            this.bt_periodo.Click += new System.EventHandler(this.bt_periodo_Click);
             // 
             // pn_header
             // 
             this.pn_header.BackColor = System.Drawing.Color.Tan;
-            this.pn_header.Controls.Add(this.lb_statusServer);
             this.pn_header.Controls.Add(this.bt_closePrincipal);
             this.pn_header.Location = new System.Drawing.Point(0, 0);
             this.pn_header.Margin = new System.Windows.Forms.Padding(0);
@@ -142,17 +152,6 @@ namespace sistemaAcademico
             this.pn_header.Size = new System.Drawing.Size(800, 50);
             this.pn_header.TabIndex = 0;
             this.pn_header.MouseMove += new System.Windows.Forms.MouseEventHandler(this.pn_header_MouseMove);
-            // 
-            // lb_statusServer
-            // 
-            this.lb_statusServer.AutoSize = true;
-            this.lb_statusServer.BackColor = System.Drawing.Color.Transparent;
-            this.lb_statusServer.ForeColor = System.Drawing.Color.DarkRed;
-            this.lb_statusServer.Location = new System.Drawing.Point(750, 34);
-            this.lb_statusServer.Name = "lb_statusServer";
-            this.lb_statusServer.Size = new System.Drawing.Size(37, 13);
-            this.lb_statusServer.TabIndex = 1;
-            this.lb_statusServer.Text = "Offline";
             // 
             // bt_closePrincipal
             // 
@@ -185,17 +184,6 @@ namespace sistemaAcademico
             this.panelChild.Size = new System.Drawing.Size(611, 340);
             this.panelChild.TabIndex = 3;
             // 
-            // label1
-            // 
-            this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.ForeColor = System.Drawing.SystemColors.ButtonFace;
-            this.label1.Location = new System.Drawing.Point(12, 16);
-            this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(104, 24);
-            this.label1.TabIndex = 5;
-            this.label1.Text = "Bem Vindo";
-            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -214,7 +202,6 @@ namespace sistemaAcademico
             this.pn_menu.ResumeLayout(false);
             this.pn_menu.PerformLayout();
             this.pn_header.ResumeLayout(false);
-            this.pn_header.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -226,7 +213,6 @@ namespace sistemaAcademico
         private System.Windows.Forms.Panel pn_header;
         private System.Windows.Forms.Button bt_disciplina;
         private System.Windows.Forms.Button bt_cursos;
-        private System.Windows.Forms.Label lb_statusServer;
         private System.Windows.Forms.Button bt_closePrincipal;
         private System.Windows.Forms.Panel pn_status;
         private System.Windows.Forms.Panel panelChild;

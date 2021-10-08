@@ -13,6 +13,7 @@ namespace DataAccess
     public abstract class connectionToSql
     {
         private readonly string connectionString;
+
         public connectionToSql()
         {
             connectionString =

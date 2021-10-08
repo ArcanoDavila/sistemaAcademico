@@ -3,14 +3,12 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+using System.Data;
 
 namespace Common.Cache
 {
-    public class UserLoginCache
+    public class PeriodoCache
     {
-            public static string UserLogin { get; set; }
-            public static string UserName { get; set; }
+        public DataTable Table;
     }
-
 }
