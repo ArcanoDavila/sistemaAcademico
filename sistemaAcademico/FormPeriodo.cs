@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using Domain;
+using Common.Cache;
 
 
 namespace sistemaAcademico
@@ -107,6 +108,11 @@ namespace sistemaAcademico
             {
                 MessageBox.Show("Selecione uma linha na tabela Periodos");
             }
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

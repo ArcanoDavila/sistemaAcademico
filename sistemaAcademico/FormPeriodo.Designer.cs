@@ -49,12 +49,13 @@ namespace sistemaAcademico
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(508, 12);
+            this.button1.Location = new System.Drawing.Point(542, 12);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.Size = new System.Drawing.Size(41, 23);
             this.button1.TabIndex = 0;
-            this.button1.Text = "button1";
+            this.button1.Text = "X";
             this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
             // bt_salvarPeriodo
             // 
@@ -88,10 +89,10 @@ namespace sistemaAcademico
             // lb_title_periodos
             // 
             this.lb_title_periodos.AutoSize = true;
-            this.lb_title_periodos.Font = new System.Drawing.Font("Eurostile", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lb_title_periodos.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lb_title_periodos.Location = new System.Drawing.Point(12, 12);
             this.lb_title_periodos.Name = "lb_title_periodos";
-            this.lb_title_periodos.Size = new System.Drawing.Size(99, 25);
+            this.lb_title_periodos.Size = new System.Drawing.Size(97, 25);
             this.lb_title_periodos.TabIndex = 5;
             this.lb_title_periodos.Text = "Periodos";
             // 

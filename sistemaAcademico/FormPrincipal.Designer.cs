@@ -97,7 +97,7 @@ namespace sistemaAcademico
             this.bt_disciplina.BackColor = System.Drawing.Color.DarkGray;
             this.bt_disciplina.FlatAppearance.BorderSize = 0;
             this.bt_disciplina.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_disciplina.Font = new System.Drawing.Font("Eurostile", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_disciplina.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_disciplina.ForeColor = System.Drawing.Color.White;
             this.bt_disciplina.Location = new System.Drawing.Point(2, 198);
             this.bt_disciplina.Name = "bt_disciplina";
@@ -107,13 +107,14 @@ namespace sistemaAcademico
             this.bt_disciplina.Text = "Disciplina";
             this.bt_disciplina.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.bt_disciplina.UseVisualStyleBackColor = false;
+            this.bt_disciplina.Click += new System.EventHandler(this.bt_disciplina_Click);
             // 
             // bt_cursos
             // 
             this.bt_cursos.BackColor = System.Drawing.Color.DarkGray;
             this.bt_cursos.FlatAppearance.BorderSize = 0;
             this.bt_cursos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_cursos.Font = new System.Drawing.Font("Eurostile", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_cursos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_cursos.ForeColor = System.Drawing.Color.White;
             this.bt_cursos.Location = new System.Drawing.Point(2, 153);
             this.bt_cursos.Name = "bt_cursos";
@@ -130,7 +131,7 @@ namespace sistemaAcademico
             this.bt_periodo.BackColor = System.Drawing.Color.DarkGray;
             this.bt_periodo.FlatAppearance.BorderSize = 0;
             this.bt_periodo.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.bt_periodo.Font = new System.Drawing.Font("Eurostile", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_periodo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.bt_periodo.ForeColor = System.Drawing.Color.White;
             this.bt_periodo.Location = new System.Drawing.Point(0, 108);
             this.bt_periodo.Name = "bt_periodo";

@@ -45,6 +45,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="connectionToSql.cs" />
+    <Compile Include="CursoDao.cs" />
+    <Compile Include="DisciplinaDao.cs" />
     <Compile Include="PeriodoDao.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="UserDao.cs" />

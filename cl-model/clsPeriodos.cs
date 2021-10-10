@@ -10,7 +10,7 @@ using MySql.Data.MySqlClient;
 
 namespace Domain
 {
-    public class clsPeriodos:clsCommon
+    public class clsPeriodos
     {
         private PeriodoDao objetoPeriodo = new PeriodoDao();
 

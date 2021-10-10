@@ -75,5 +75,10 @@ namespace sistemaAcademico
         {
             openChildForm(new FormPeriodo());
         }
+
+        private void bt_disciplina_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormDisciplina());
+        }
     }
 }
