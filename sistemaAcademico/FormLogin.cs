@@ -77,6 +77,8 @@ namespace sistemaAcademico
                         this.Hide();
                     } else
                     {
+                        txt_password.Clear();
+                        txt_password.Focus();
                         msgError("Login Invalido");
                     }
                 }
@@ -99,7 +101,7 @@ namespace sistemaAcademico
 
         private void bt_closeLogin_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
 
         private void Logout(object sender, FormClosedEventArgs e)
@@ -119,5 +121,13 @@ namespace sistemaAcademico
             this.Show();
         }
 
+        private void txt_password_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (Convert.ToInt32(e.KeyChar) == 13)
+                {
+                e.Handled = true;
+                bt_login.PerformClick();
+                }
+         }
     }
 }

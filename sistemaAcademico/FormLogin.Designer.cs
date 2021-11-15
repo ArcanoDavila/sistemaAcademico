@@ -29,6 +29,7 @@ namespace sistemaAcademico
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormLogin));
             this.panel1 = new System.Windows.Forms.Panel();
             this.bt_login = new System.Windows.Forms.Button();
             this.txt_user = new System.Windows.Forms.TextBox();
@@ -41,6 +42,7 @@ namespace sistemaAcademico
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ControlDarkDark;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(299, 451);
@@ -52,7 +54,7 @@ namespace sistemaAcademico
             this.bt_login.Name = "bt_login";
             this.bt_login.Size = new System.Drawing.Size(183, 31);
             this.bt_login.TabIndex = 3;
-            this.bt_login.Text = "Acceder";
+            this.bt_login.Text = "Login";
             this.bt_login.UseVisualStyleBackColor = true;
             this.bt_login.Click += new System.EventHandler(this.bt_login_Click);
             // 
@@ -80,15 +82,16 @@ namespace sistemaAcademico
             this.txt_password.TabIndex = 2;
             this.txt_password.Text = "Password";
             this.txt_password.Enter += new System.EventHandler(this.txt_password_Enter);
+            this.txt_password.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txt_password_KeyPress);
             this.txt_password.Leave += new System.EventHandler(this.txt_password_Leave);
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Font = new System.Drawing.Font("Eurostile", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 27.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(397, 49);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(315, 45);
+            this.label1.Size = new System.Drawing.Size(307, 42);
             this.label1.TabIndex = 4;
             this.label1.Text = "My Sys Academy";
             // 
@@ -123,6 +126,7 @@ namespace sistemaAcademico
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.BackColor = System.Drawing.SystemColors.ButtonFace;
             this.ClientSize = new System.Drawing.Size(800, 450);
             this.Controls.Add(this.bt_closeLogin);
             this.Controls.Add(this.lb_errorLogin);
