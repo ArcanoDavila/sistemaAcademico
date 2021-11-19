@@ -32,15 +32,18 @@ namespace sistemaAcademico
             this.lb_title_users = new System.Windows.Forms.Label();
             this.dg = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lb_password = new System.Windows.Forms.Label();
+            this.txt_password = new System.Windows.Forms.TextBox();
+            this.checkAdm = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.txt_login = new System.Windows.Forms.TextBox();
             this.txt_nome = new System.Windows.Forms.TextBox();
-            this.txt_Id = new System.Windows.Forms.TextBox();
             this.bt_salvar = new System.Windows.Forms.Button();
             this.bt_delete = new System.Windows.Forms.Button();
             this.bt_editar = new System.Windows.Forms.Button();
-            this.checkAdm = new System.Windows.Forms.CheckBox();
+            this.bt_close = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -67,17 +70,45 @@ namespace sistemaAcademico
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.lb_password);
+            this.panel1.Controls.Add(this.txt_password);
             this.panel1.Controls.Add(this.checkAdm);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+            this.panel1.Controls.Add(this.txt_login);
             this.panel1.Controls.Add(this.txt_nome);
-            this.panel1.Controls.Add(this.txt_Id);
             this.panel1.Controls.Add(this.bt_salvar);
             this.panel1.Location = new System.Drawing.Point(362, 37);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(221, 209);
             this.panel1.TabIndex = 16;
+            // 
+            // lb_password
+            // 
+            this.lb_password.AutoSize = true;
+            this.lb_password.Location = new System.Drawing.Point(10, 100);
+            this.lb_password.Name = "lb_password";
+            this.lb_password.Size = new System.Drawing.Size(56, 13);
+            this.lb_password.TabIndex = 16;
+            this.lb_password.Text = "Password:";
+            // 
+            // txt_password
+            // 
+            this.txt_password.Location = new System.Drawing.Point(67, 93);
+            this.txt_password.Name = "txt_password";
+            this.txt_password.Size = new System.Drawing.Size(138, 20);
+            this.txt_password.TabIndex = 15;
+            // 
+            // checkAdm
+            // 
+            this.checkAdm.AutoSize = true;
+            this.checkAdm.Location = new System.Drawing.Point(13, 128);
+            this.checkAdm.Name = "checkAdm";
+            this.checkAdm.Size = new System.Drawing.Size(89, 17);
+            this.checkAdm.TabIndex = 14;
+            this.checkAdm.Text = "Administrador";
+            this.checkAdm.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -106,19 +137,19 @@ namespace sistemaAcademico
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome:";
             // 
+            // txt_login
+            // 
+            this.txt_login.Location = new System.Drawing.Point(67, 67);
+            this.txt_login.Name = "txt_login";
+            this.txt_login.Size = new System.Drawing.Size(138, 20);
+            this.txt_login.TabIndex = 7;
+            // 
             // txt_nome
             // 
-            this.txt_nome.Location = new System.Drawing.Point(67, 67);
+            this.txt_nome.Location = new System.Drawing.Point(67, 41);
             this.txt_nome.Name = "txt_nome";
             this.txt_nome.Size = new System.Drawing.Size(138, 20);
-            this.txt_nome.TabIndex = 7;
-            // 
-            // txt_Id
-            // 
-            this.txt_Id.Location = new System.Drawing.Point(67, 41);
-            this.txt_Id.Name = "txt_Id";
-            this.txt_Id.Size = new System.Drawing.Size(138, 20);
-            this.txt_Id.TabIndex = 6;
+            this.txt_nome.TabIndex = 6;
             // 
             // bt_salvar
             // 
@@ -147,21 +178,22 @@ namespace sistemaAcademico
             this.bt_editar.Text = "Editar";
             this.bt_editar.UseVisualStyleBackColor = true;
             // 
-            // checkAdm
+            // bt_close
             // 
-            this.checkAdm.AutoSize = true;
-            this.checkAdm.Location = new System.Drawing.Point(13, 110);
-            this.checkAdm.Name = "checkAdm";
-            this.checkAdm.Size = new System.Drawing.Size(89, 17);
-            this.checkAdm.TabIndex = 14;
-            this.checkAdm.Text = "Administrador";
-            this.checkAdm.UseVisualStyleBackColor = true;
+            this.bt_close.Location = new System.Drawing.Point(539, 6);
+            this.bt_close.Name = "bt_close";
+            this.bt_close.Size = new System.Drawing.Size(45, 25);
+            this.bt_close.TabIndex = 19;
+            this.bt_close.Text = "X";
+            this.bt_close.UseVisualStyleBackColor = true;
+            this.bt_close.Click += new System.EventHandler(this.button1_Click);
             // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(595, 301);
+            this.Controls.Add(this.bt_close);
             this.Controls.Add(this.bt_delete);
             this.Controls.Add(this.bt_editar);
             this.Controls.Add(this.panel1);
@@ -187,11 +219,14 @@ namespace sistemaAcademico
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.TextBox txt_login;
         private System.Windows.Forms.TextBox txt_nome;
-        private System.Windows.Forms.TextBox txt_Id;
         private System.Windows.Forms.Button bt_salvar;
         private System.Windows.Forms.Button bt_delete;
         private System.Windows.Forms.Button bt_editar;
         private System.Windows.Forms.CheckBox checkAdm;
+        private System.Windows.Forms.Label lb_password;
+        private System.Windows.Forms.TextBox txt_password;
+        private System.Windows.Forms.Button bt_close;
     }
 }

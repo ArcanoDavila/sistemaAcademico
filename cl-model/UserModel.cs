@@ -14,23 +14,16 @@ namespace Domain
         UserDao userDao = new UserDao();
 
         //Atributos
-        private int adm;
-        private string name;
         private string password;
         private string login;
 
-        public UserModel(int adm, string name, string password, string login)
+        public UserModel(string password, string login)
         {
-            this.adm = adm;
-            this.name = name;
             this.password = password;
             this.login = login;
         }
 
-        public UserModel()
-        {
-
-        }
+        public UserModel() { }
         public DataTable MostrarUsuarios()
         {
             DataTable _table = new DataTable();

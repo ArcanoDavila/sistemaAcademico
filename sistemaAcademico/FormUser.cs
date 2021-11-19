@@ -26,9 +26,16 @@ namespace sistemaAcademico
             dg.DataSource = userModel.MostrarUsuarios();
         }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
+
         private void FormUser_Load(object sender, EventArgs e)
         {
             MostrarUsuaruios();
         }
+
+
     }
 }
