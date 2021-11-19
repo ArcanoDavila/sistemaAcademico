@@ -91,11 +91,9 @@ namespace DataAccess
                     comand.Parameters.AddWithValue("@perid", ID);
                     comand.CommandType = CommandType.Text;
                     comand.ExecuteNonQuery();
-
                 }
 
             }
-
         }
 
 

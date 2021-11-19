@@ -33,15 +33,14 @@ namespace sistemaAcademico
             this.dg = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.txt_sigla = new System.Windows.Forms.TextBox();
             this.txt_nome = new System.Windows.Forms.TextBox();
             this.txt_Id = new System.Windows.Forms.TextBox();
             this.bt_salvar = new System.Windows.Forms.Button();
             this.bt_delete = new System.Windows.Forms.Button();
             this.bt_editar = new System.Windows.Forms.Button();
+            this.checkAdm = new System.Windows.Forms.CheckBox();
             ((System.ComponentModel.ISupportInitialize)(this.dg)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
@@ -68,11 +67,10 @@ namespace sistemaAcademico
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.ActiveBorder;
+            this.panel1.Controls.Add(this.checkAdm);
             this.panel1.Controls.Add(this.label5);
-            this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Controls.Add(this.txt_sigla);
             this.panel1.Controls.Add(this.txt_nome);
             this.panel1.Controls.Add(this.txt_Id);
             this.panel1.Controls.Add(this.bt_salvar);
@@ -89,15 +87,6 @@ namespace sistemaAcademico
             this.label5.Size = new System.Drawing.Size(77, 13);
             this.label5.TabIndex = 13;
             this.label5.Text = "Dados Usuario";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(10, 100);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(38, 13);
-            this.label4.TabIndex = 12;
-            this.label4.Text = "E-mail:";
             // 
             // label3
             // 
@@ -116,13 +105,6 @@ namespace sistemaAcademico
             this.label2.Size = new System.Drawing.Size(38, 13);
             this.label2.TabIndex = 10;
             this.label2.Text = "Nome:";
-            // 
-            // txt_sigla
-            // 
-            this.txt_sigla.Location = new System.Drawing.Point(67, 93);
-            this.txt_sigla.Name = "txt_sigla";
-            this.txt_sigla.Size = new System.Drawing.Size(138, 20);
-            this.txt_sigla.TabIndex = 8;
             // 
             // txt_nome
             // 
@@ -165,6 +147,16 @@ namespace sistemaAcademico
             this.bt_editar.Text = "Editar";
             this.bt_editar.UseVisualStyleBackColor = true;
             // 
+            // checkAdm
+            // 
+            this.checkAdm.AutoSize = true;
+            this.checkAdm.Location = new System.Drawing.Point(13, 110);
+            this.checkAdm.Name = "checkAdm";
+            this.checkAdm.Size = new System.Drawing.Size(89, 17);
+            this.checkAdm.TabIndex = 14;
+            this.checkAdm.Text = "Administrador";
+            this.checkAdm.UseVisualStyleBackColor = true;
+            // 
             // FormUser
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -193,14 +185,13 @@ namespace sistemaAcademico
         private System.Windows.Forms.DataGridView dg;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox txt_sigla;
         private System.Windows.Forms.TextBox txt_nome;
         private System.Windows.Forms.TextBox txt_Id;
         private System.Windows.Forms.Button bt_salvar;
         private System.Windows.Forms.Button bt_delete;
         private System.Windows.Forms.Button bt_editar;
+        private System.Windows.Forms.CheckBox checkAdm;
     }
 }

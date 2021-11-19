@@ -31,11 +31,6 @@ namespace Domain
         {
 
         }
-        public bool LoginUser(string user, string pass)
-        {
-            return userDao.Login(user, pass);
-        }
-
         public DataTable MostrarUsuarios()
         {
             DataTable _table = new DataTable();
@@ -43,10 +38,16 @@ namespace Domain
             return _table;
         }
 
-        public string editUser()
+        public bool LoginUser(string user, string pass)
         {
+            return userDao.Login(user, pass);
+        }
+
+        public string EditUser(string name, bool adm)
+        {
+            int cadm = adm ? 1 : 0;
             try { 
-            userDao.EditUser(name, password, adm, login);
+            userDao.EditUser(name, cadm);
             LoginUser(login, password);
                 return "Usuario Alterado!";
             }
@@ -54,5 +55,24 @@ namespace Domain
                 return "Alteraçao Invalida1" + ex;
             }
         }
+
+        public string EditPassword(string login, string password)
+        {
+            try
+            {
+            userDao.EditPassword(login, password);
+                return "Senha Alterada!";
+            }
+            catch(Exception ex)
+            {
+                return "Nao foi possivel alterar." + ex;
+            }
+        }
+        public void DeleteUser(string login)
+        {
+            userDao.DeleteUser(login);
+        }
+
+
     }
 }
