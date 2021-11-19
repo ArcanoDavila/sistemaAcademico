@@ -19,7 +19,7 @@ namespace DataAccess
                 using (var comand = new MySqlCommand())
                 {
                     comand.Connection = connection;
-                    comand.CommandText = "Select * from tblDisciplina";
+                    comand.CommandText = "Select * from tblDisciplinas; ";
                     comand.CommandType = CommandType.Text;
                     MySqlDataReader _reader = comand.ExecuteReader();
                     var dataTable = new DataTable();
@@ -40,7 +40,7 @@ namespace DataAccess
                 using (var comand = new MySqlCommand())
                 {
                     comand.Connection = connection;
-                    comand.CommandText = "INSERT INTO tblDisciplina(disid,disnome,dissigla,disobs,curid) values (@disid,@disnome,@dissigla,@disobs,@curid);";
+                    comand.CommandText = "INSERT INTO tblDisciplinas(disid,disnome,dissigla,disobs,curid) values (@disid,@disnome,@dissigla,@disobs,@curid);";
                     comand.Parameters.AddWithValue("@disid", ID);
                     comand.Parameters.AddWithValue("@disnome", nome);
                     comand.Parameters.AddWithValue("@dissigla", sigla);
@@ -64,7 +64,7 @@ namespace DataAccess
                 using (var comand = new MySqlCommand())
                 {
                     comand.Connection = connection;
-                    comand.CommandText = "UPDATE tblDisciplina SET curid=@curid,disnome=@disnome,dissigla=@dissigla, disobs=@disobs where disid=@disid;";
+                    comand.CommandText = "UPDATE tblDisciplinas SET curid=@curid,disnome=@disnome,dissigla=@dissigla, disobs=@disobs where disid=@disid;";
                     comand.Parameters.AddWithValue("@disid", ID);
                     comand.Parameters.AddWithValue("@disnome", nome);
                     comand.Parameters.AddWithValue("@dissigla", sigla);
@@ -88,7 +88,7 @@ namespace DataAccess
                 using (var comand = new MySqlCommand())
                 {
                     comand.Connection = connection;
-                    comand.CommandText = "DELETE FROM tblDisciplina WHERE disid=@disid;";
+                    comand.CommandText = "DELETE FROM tblDisciplinas WHERE disid=@disid;";
                     comand.Parameters.AddWithValue("@disid", ID);
                     comand.CommandType = CommandType.Text;
                     comand.ExecuteNonQuery();

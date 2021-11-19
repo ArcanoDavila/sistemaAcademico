@@ -38,10 +38,6 @@ namespace sistemaAcademico
             childForm.Show();
         }
 
-        private void bt_cursos_Click(object sender, EventArgs e)
-        {
-            openChildForm(new FormCursos());
-        }
 
         private void bt_closePrincipal_Click(object sender, EventArgs e)
         {
@@ -57,6 +53,10 @@ namespace sistemaAcademico
         private void FormPrincipal_Load(object sender, EventArgs e)
         {
             LoadUserData();
+            if(UserLoginCache.UserAdm >= 1)
+            {
+                bt_user.Visible = true;
+            }
         }
 
         [DllImport("user32.DLL", EntryPoint = "ReleaseCapture")]
@@ -71,6 +71,10 @@ namespace sistemaAcademico
             SendMessage(this.Handle, 0x112, 0xf012, 0);
         }
 
+        private void bt_cursos_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormCursos());
+        }
         private void bt_periodo_Click(object sender, EventArgs e)
         {
             openChildForm(new FormPeriodo());
@@ -79,6 +83,11 @@ namespace sistemaAcademico
         private void bt_disciplina_Click(object sender, EventArgs e)
         {
             openChildForm(new FormDisciplina());
+        }
+
+        private void bt_user_Click(object sender, EventArgs e)
+        {
+            openChildForm(new FormUser());
         }
     }
 }

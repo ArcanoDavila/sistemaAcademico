@@ -18,11 +18,11 @@ namespace DataAccess
         {
             connectionString =
                         "SslMode=none;" +
-                        "server = 2.57.88.4;" +
+                        "server = 212.1.211.51;" +
                         "port = 3306; " +
-                        "user = u975059562_project; " +
+                        "user = u323887216_project; " +
                         "password = @Unip2021*;" +
-                        "database = u975059562_ADS;";
+                        "database = u323887216_ADS;";
         
         }
 

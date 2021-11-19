@@ -22,7 +22,7 @@ namespace DataAccess
                 using ( var comand = new MySqlCommand())
                 {
                     comand.Connection = connection;
-                    comand.CommandText = "Select * from tblPeriodo";
+                    comand.CommandText = "select * from tblPeriodo ; ";
                     comand.CommandType = CommandType.Text;
                     MySqlDataReader _reader = comand.ExecuteReader();
                     var dataTable = new DataTable();

@@ -11,6 +11,7 @@ namespace Common.Cache
     {
             public static string UserLogin { get; set; }
             public static string UserName { get; set; }
+            public static int UserAdm { get; set; }
     }
 
 }

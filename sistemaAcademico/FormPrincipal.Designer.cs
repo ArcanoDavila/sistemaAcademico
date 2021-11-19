@@ -40,6 +40,7 @@ namespace sistemaAcademico
             this.bt_closePrincipal = new System.Windows.Forms.Button();
             this.pn_status = new System.Windows.Forms.Panel();
             this.panelChild = new System.Windows.Forms.Panel();
+            this.bt_user = new System.Windows.Forms.Button();
             this.pn_menu.SuspendLayout();
             this.pn_header.SuspendLayout();
             this.SuspendLayout();
@@ -47,6 +48,7 @@ namespace sistemaAcademico
             // pn_menu
             // 
             this.pn_menu.BackColor = System.Drawing.Color.DimGray;
+            this.pn_menu.Controls.Add(this.bt_user);
             this.pn_menu.Controls.Add(this.label1);
             this.pn_menu.Controls.Add(this.lb_UserName);
             this.pn_menu.Controls.Add(this.lb_UserLogin);
@@ -185,6 +187,24 @@ namespace sistemaAcademico
             this.panelChild.Size = new System.Drawing.Size(611, 340);
             this.panelChild.TabIndex = 3;
             // 
+            // bt_user
+            // 
+            this.bt_user.BackColor = System.Drawing.Color.DarkGray;
+            this.bt_user.FlatAppearance.BorderSize = 0;
+            this.bt_user.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.bt_user.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bt_user.ForeColor = System.Drawing.Color.White;
+            this.bt_user.Location = new System.Drawing.Point(0, 243);
+            this.bt_user.Name = "bt_user";
+            this.bt_user.Padding = new System.Windows.Forms.Padding(30, 0, 0, 0);
+            this.bt_user.Size = new System.Drawing.Size(189, 39);
+            this.bt_user.TabIndex = 6;
+            this.bt_user.Text = "Usuarios";
+            this.bt_user.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.bt_user.UseVisualStyleBackColor = false;
+            this.bt_user.Visible = false;
+            this.bt_user.Click += new System.EventHandler(this.bt_user_Click);
+            // 
             // FormPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -220,6 +240,7 @@ namespace sistemaAcademico
         private System.Windows.Forms.Label lb_UserName;
         private System.Windows.Forms.Label lb_UserLogin;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Button bt_user;
     }
 }
 
