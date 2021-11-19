@@ -77,7 +77,6 @@ namespace DataAccess
                     command.CommandText = "update users set userName = @user, adm = @adm where userLogin = @login; ";
                     command.Parameters.AddWithValue("@user", name);
                     command.Parameters.AddWithValue("@adm", adm);
-                    command.Parameters.AddWithValue("@login", login);
                     command.CommandType = CommandType.Text;
                     MySqlDataReader reader = command.ExecuteReader();
                     return command.ExecuteNonQuery();
